@@ -1,0 +1,29 @@
+//
+//  TextView.swift
+//  MIL
+//
+//  Created by GoEun Jeong on 2021/08/22.
+//
+
+import SwiftUI
+ 
+struct TextView: UIViewRepresentable {
+
+    @Binding var text: String
+ 
+    func makeUIView(context: Context) -> UITextView {
+        let textView = UITextView()
+ 
+        textView.font = UIFont.preferredFont(forTextStyle: .body)
+        textView.autocapitalizationType = .sentences
+        textView.isSelectable = true
+        textView.isUserInteractionEnabled = true
+ 
+        return textView
+    }
+ 
+    func updateUIView(_ uiView: UITextView, context: Context) {
+        uiView.text = text
+        uiView.font = UIFont.preferredFont(forTextStyle: .body)
+    }
+}

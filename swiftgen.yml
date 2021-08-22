@@ -1,0 +1,6 @@
+xcassets:
+  inputs:
+    - MIL/Resource/Assets.xcassets
+  outputs:
+    - templateName: swift4
+      output: MIL/Resource/Assets.swift
